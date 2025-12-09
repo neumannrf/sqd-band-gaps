@@ -1,0 +1,50 @@
+[build-system]
+requires = ["flit_core"]
+build-backend = "flit_core.buildapi"
+
+[project]
+name = "sqd_lattice"
+description = "SQD lattice"
+version = "0.0.0"
+dependencies = [
+    "qiskit==1.4.1",
+    "qiskit-addon-aqc-tensor==0.2.0",
+    "qiskit-addon-sqd==0.10.0",
+    "qiskit-ibm-runtime==0.40.0",
+    "qiskit-aer==0.17.0",
+    "ffsim==0.0.54",
+    "h5py==3.13.0",
+    "mapomatic==0.13.0",
+    "matplotlib==3.10.1",
+    "PyYAML==6.0.2"
+]
+
+[project.optional-dependencies]
+dev = [
+    "mypy",
+    "pytest",
+    "qiskit[visualization]",
+    "ruff",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.mypy]
+ignore_missing_imports = true
+files = ["src/**/*.py", "tests/**/*.py"]
+
+[tool.ruff]
+include = [
+    "pyproject.toml",
+    "src/**/*.py",
+    "src/**/*.pyi",
+    "tests/**/*.py",
+    "tests/**/*.pyi",
+    "docs/**/*.py",
+    "docs/**/*.pyi",
+    "docs/**/*.ipynb",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "N", "NPY"]

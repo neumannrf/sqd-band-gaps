@@ -1,0 +1,1 @@
+nohup ./main_hardware.zsh > main_hardware.out 2>&1 &

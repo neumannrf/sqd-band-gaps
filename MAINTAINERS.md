@@ -1,0 +1,4 @@
+- Alan Duriez (@ACDuriez)
+- Pamela Costa Carvalho (@pcostacarvalho)
+- Marco Antonio Guimaraes Auad Barroca (@MarcoBarroca)
+- Rodrigo Neumann Barros Ferreira (@neumannrf)

@@ -1,0 +1,1 @@
+nohup ./main.zsh > main.out 2>&1 &

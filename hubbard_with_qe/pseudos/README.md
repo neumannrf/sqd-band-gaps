@@ -1,0 +1,1 @@
+You can download the files for the pseudopotentials in `https://www.quantum-espresso.org/pseudopotentials/`

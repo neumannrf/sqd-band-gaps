@@ -1,0 +1,66 @@
+BEGIN MATERIAL
+material_name
+END MATERIAL
+
+BEGIN PATH
+/dccstor/quant4clim/pcarvalho/hubbard_with_qe/pseudos
+END PATH
+
+BEGIN QE_PATH
+/dccstor/quant4clim/icx-2024.2.1-based/qe-7.2-icx-2024.2.1/bin
+END QE_PATH
+
+BEGIN PSEUDO
+Metal.pbe-dnl-kjpaw_psl.1.0.0.UPF 4
+Metal.pbe-mt_fhi.UPF 4
+Metal.pbe-van.UPF 4
+Metal.pbe-d-hgh.UPF 4
+Metal.pbe-dnl-rrkjus_psl.1.0.0.UPF 4
+Metal_pbe_v1.uspp.F.UPF 8
+END PSEUDO
+
+BEGIN KPOINTS_BANDS
+K_POINTS {crystal_b}
+2
+   0.0000000000	0.0000000000	0.0000000000 100 !G
+   0.5000000000 0.5000000000    0.5000000000  0 !L
+END KPOINTS_BANDS
+
+BEGIN BANDS
+&BANDS
+  prefix = 'material'
+  outdir = './out/'
+  filband = 'material_bands.dat'
+/
+END BANDS
+
+BEGIN HP
+&inputhp
+  outdir = './out/',
+  prefix = 'material',
+  nq1 = #q, nq2 = #q, nq3 = #q,
+  conv_thr_chi = 1.0d-7,
+  dist_thr = 6.D-4,
+  find_atpert = 3,
+!  perturb_only_atom(#N) = .true.,
+!  determine_q_mesh_only = .true.,
+!  determine_num_pert_only = .true.,
+!  sum_pertq = .true.,
+!  start_q = #SQ,
+!  compute_hp = .true.,
+/
+END HP
+
+BEGIN PROJ
+&projwfc
+  outdir="./out/"
+  ngauss=0
+  prefix='material',
+  Emax=25.0, DeltaE=0.1, degauss=0.02,
+/
+END PROJ
+
+BEGIN PROCS
+32
+END PROCS
+
