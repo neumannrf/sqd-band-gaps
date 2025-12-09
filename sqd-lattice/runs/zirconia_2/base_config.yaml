@@ -1,0 +1,28 @@
+pyscf:
+  compute_fci: false
+
+basis: "molecular"
+
+ffsim:
+  layers_lucj: 1
+  truncated_lucj: true
+  compute_exp_vals: false
+
+sampler_ffsim:
+  shots: 3_000_000
+
+sampler_mps:
+  trunc: 5 # Log scale (value will be 1e-{trunc})
+  shots: 100
+  max_bond_dimension: 50
+
+sqd: # Can be defined for each subpsace afterwards
+  sqd_samples_per_batch: [20000] 
+  sampling: "ffsim"
+
+hci: # Can be defined for each subpsace afterwards
+  energy_tol: 1.0e-10
+  max_iter: 100
+  num_cpus: 1
+  select_cutoffs: [0.05,0.00000005]
+  select_cutoff_steps: 30

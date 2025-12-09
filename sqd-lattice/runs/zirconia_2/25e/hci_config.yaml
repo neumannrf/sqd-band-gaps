@@ -1,0 +1,7 @@
+energy_tol: 1.0e-10
+max_iter: 100
+num_cpus: 1
+select_cutoff_steps: 30
+select_cutoffs:
+- 0.05
+- 5.0e-08

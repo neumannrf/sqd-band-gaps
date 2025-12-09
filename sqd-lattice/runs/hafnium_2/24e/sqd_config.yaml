@@ -1,0 +1,17 @@
+ext_sqd:
+  amplitude_threshold: 0.001
+  n_batches: 1
+  num_cpus: 5
+  recovery_iterations: 1
+  # samples_per_batch: [100,200,300,500,1000,2000,3000,5000,7000,10000]
+  samples_per_batch: [1,2,3,4,5]
+  samples_per_batch_old: 7000
+  sampling: hardware
+  transitions: singles
+max_davidson_cycles: 800
+n_batches: 1
+num_cpus: 30
+parallelize_batches: false
+recovery_iterations: 1
+samples_per_batch: [500,1000,1500,2000,3000,4000]
+sampling: hardware

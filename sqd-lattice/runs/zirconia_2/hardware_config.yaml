@@ -1,0 +1,13 @@
+instance: "instance"
+processor: "processor"
+# processor: "aachen"
+
+spin_a_layout : [143,136,123,124,125,117,105,106,107,97,87,88,89,78,69,70,71,58,51,52,53]
+spin_b_layout : [145,146,147,137,127,128,129,118,109,110,111,98,91,92,93,79,73,74,75,59,55]
+
+n_pubs: 30
+
+shots_per_pub: 100_000
+
+dynamical_decoupling: true
+fractional_gates: false

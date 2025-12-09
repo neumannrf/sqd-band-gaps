@@ -1,0 +1,1 @@
+{"sqd_energy": -337.9010460448292, "best_batch": 0, "samples_per_batch": 1, "addresses_alpha": 2485, "addresses_beta": 2485, "dice_subspace_dimension": 6175225, "pyscf_subspace_dimension": 6175225, "ground_state_support": 3243, "variance": 7.264895501239475e-09}
